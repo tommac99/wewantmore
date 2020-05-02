@@ -1,18 +1,18 @@
 import React from "react";
+// import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from "react-router-dom";
+// import { setStore } from '../store';
+import { routes } from "./routes";
+// import { User } from '../store/models';
 
-class ReactApp extends React.Component {
-  getPosts = () => {
-    fetch("/api/v1/posts.json")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch(console.error);
-  };
+import "./style.css";
 
-  render() {
-    return <React.Fragment>{this.getPosts()}</React.Fragment>;
-  }
-}
+// These properties are passed through the DOM.
+// See the main_app_helper.rb.
+export type MainAppProps = {
+  currentUser: any;
+};
 
-export default ReactApp;
+export const MainApp = () => {
+  return <Router>{renderRoutes(routes, this.props)}</Router>;
+};
