@@ -27,7 +27,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Custom Gems
+# Authentification
 gem 'devise'
+# File uploads
+gem 'carrierwave'
+# Handle Image manipulation
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
