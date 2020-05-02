@@ -3,7 +3,7 @@
 module MainAppHelper
   def main_app_props(user)
     {
-      currentUser: user_props(user),
+      currentUser: user ? user_props(user) : 'guest',
     }
   end
 

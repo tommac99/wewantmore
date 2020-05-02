@@ -1,8 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 class HomePage extends React.Component {
+  getPosts = () => {
+    fetch("/api/v1/posts.json")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch(console.error);
+  };
+
   render() {
-    return <React.Fragment>Tagline: {this.props.tagline}</React.Fragment>;
+    return <React.Fragment>{this.getPosts()}</React.Fragment>;
   }
 }
 
