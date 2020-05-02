@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
-class HomePage extends React.Component {
+
+class ReactApp extends React.Component {
   getPosts = () => {
     fetch("/api/v1/posts.json")
       .then((response) => response.json())
@@ -15,7 +15,4 @@ class HomePage extends React.Component {
   }
 }
 
-HomePage.propTypes = {
-  tagline: PropTypes.string,
-};
-export default HomePage;
+export default ReactApp;
